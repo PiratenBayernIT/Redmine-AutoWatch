@@ -1,8 +1,8 @@
 Redmine::Plugin.register :autowatch do
   name 'Autowatch plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
-  version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  author 'University of Trier - Andreas Litt, Matthias Lohr'
+  description 'Configure users to become a watcher for all new tickets'
+  version '0.1.0'
+  url ''
+  author_url 'http://www.uni-trier.de/'
 end
