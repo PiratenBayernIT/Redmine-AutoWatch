@@ -1,5 +1,5 @@
 Redmine::Plugin.register :autowatch do
-  name 'Autowatch plugin'
+  name 'AutoWatch plugin'
   author 'University of Trier - Andreas Litt, Matthias Lohr'
   description 'Configure users to become a watcher for all new tickets'
   version '0.1.0'
