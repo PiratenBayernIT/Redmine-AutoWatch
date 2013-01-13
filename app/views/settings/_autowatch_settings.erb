@@ -1,0 +1,9 @@
+<fieldset>
+  <%= content_tag(:legend, l(:autowatch_text_general_settings)) %>
+
+  <%= content_tag(:p, l(:autowatch_text_general_settings_description)) %>
+    <p>
+        <%= content_tag(:label, l("autowatch_role_id_name")) %>
+        <%= text_field_tag 'settings[role_id]', @settings['role_id'] %>
+    </p>
+</fieldset>
