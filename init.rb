@@ -33,6 +33,6 @@ Redmine::Plugin.register :autowatch do
 
   settings(:partial => 'settings/autowatch_settings',
            :default => {
-               'role_id' => '6'
+               'role_id' => '3'
            })
 end
