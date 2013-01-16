@@ -1,0 +1,9 @@
+= Redmine AutoWatch Plugin Setup
+
+It's very easy to install this plugin:
+
+- Create a new directory autowatch/ in your redmine plugin directory.
+- Copy the contents of this archive in your new directory
+  (redmine-2.x.x/plugins/autowatch/)
+- Restart your Redmine instance to get the plugin loaded.
+- Done.
