@@ -2,4 +2,4 @@
 en:
   autowatch_text_general_settings: "Settings"
   autowatch_text_general_settings_description: "Configure role to become a watcher for all new tickets in a project"
-  autowatch_role_id_name: "Role id"
+  autowatch_role_id_name: "Role"
