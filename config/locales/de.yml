@@ -1,5 +1,5 @@
 # German strings go here for Rails i18n
-en:
+de:
   autowatch_text_general_settings: "Einstellungen"
   autowatch_text_general_settings_description: "Diese Rolle bekommt automatisch alle neue Tickets zugewiesen"
   autowatch_role_id_name: "Rolle"
