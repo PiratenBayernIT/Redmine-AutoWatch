@@ -8,6 +8,8 @@
     </p>
     <p>
         <%= content_tag(:label, l("autowatch_tracker_id_name")) %>
-        <%= select_tag 'settings[tracker_id]', options_from_collection_for_select(Tracker.all, :id, :name, @settings['tracker_id']) %>
+        <%= select_tag 'settings[tracker_ids]', 
+            options_from_collection_for_select(Tracker.all, :id, :name, @settings['tracker_ids']), 
+            {:multiple => true} %>
     </p>
 </fieldset>
