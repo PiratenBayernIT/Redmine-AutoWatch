@@ -6,4 +6,8 @@
         <%= content_tag(:label, l("autowatch_role_id_name")) %>
         <%= select_tag 'settings[role_id]', options_from_collection_for_select(Role.all, :id, :name, @settings['role_id']) %>
     </p>
+    <p>
+        <%= content_tag(:label, l("autowatch_tracker_id_name")) %>
+        <%= select_tag 'settings[tracker_id]', options_from_collection_for_select(Tracker.all, :id, :name, @settings['tracker_id']) %>
+    </p>
 </fieldset>

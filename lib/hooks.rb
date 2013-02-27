@@ -24,14 +24,16 @@
 class Hooks < Redmine::Hook::ViewListener
   def controller_issues_new_before_save(context={} )
     dest_role = Setting.plugin_autowatch['role_id'].to_i
+    tracker_id = Setting.plugin_autowatch['tracker_id'].to_i
     issue = context[:issue]
     project = Project.find(issue.project_id) # Get Project
     project.members.each do |member| # Get all members from Project and loop through them
       member.roles.each do |role|
-        if role.id == dest_role
-          # Member is in autowatch role
+        if role.id == dest_role and issue.tracker_id == tracker_id
+          # Member is in autowatch role and ticket has the selected tracker
           user = member.user
           if !(issue.watched_by? user)
+            Rails.logger.debug("autowatch: adding watcher #{user.login} for issue '#{issue.subject}'")
             issue.add_watcher(user)
           end
         end
