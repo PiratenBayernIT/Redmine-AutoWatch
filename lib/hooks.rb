@@ -26,6 +26,9 @@ module AutoWatch
     def controller_issues_new_before_save(context={} )
       dest_role = Setting.plugin_autowatch['role_id'].to_i
       tracker_ids = Setting.plugin_autowatch['tracker_ids']
+      if not dest_role or not tracker_ids
+        return
+      end
       #Rails.logger.debug("tracker_ids '#{tracker_ids}'")
       issue = context[:issue]
       project = Project.find(issue.project_id) # Get Project
